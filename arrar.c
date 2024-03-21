@@ -45,10 +45,19 @@ void reverse(int *p)
 
 void insertbyorder(int *p)
 {
-    int i, ele;
+    int i, ele,temp;
     if (N >= SIZE)
     {
         return;
+    }
+    for(int i=0;i<N-1;i++){
+        for(int j=0;j<N-i-1;j++){
+            if(p[j]>p[j+1]){
+                temp=p[j];
+                p[j]=p[j+1];
+                p[j+1]=temp;
+            }
+        }
     }
     printf("Enter the elemnt :");
     scanf("%d", &ele);
